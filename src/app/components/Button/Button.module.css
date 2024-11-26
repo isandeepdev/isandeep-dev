@@ -1,0 +1,12 @@
+.button {
+  background-color: #9de50f;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  font-family: var(--font-bold);
+}
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}

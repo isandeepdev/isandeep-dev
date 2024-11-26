@@ -1,17 +1,119 @@
+/* 1. CSS Reset (Normalize) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in the width/height */
+}
+
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Ensure full height */
+  font-family: var(--font-regular), sans-serif; /* A fallback sans-serif font */
+  line-height: 1.5; /* Default line height */
+  -webkit-font-smoothing: antialiased; /* For smooth fonts on Webkit-based browsers */
+  -moz-osx-font-smoothing: grayscale; /* For smooth fonts on Firefox on macOS */
+}
+
+/* 2. HTML elements: Remove default styles but keep useful defaults */
+html {
+  font-size: 100%; /* Allows for scalable units (em, rem) */
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff; /* Default background color */
+  color: #fff; /* Default text color */
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* 3. Ensure links are styled consistently */
+a {
+  color: inherit; /* Inherit color from parent element */
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline; /* Underline on hover/focus for better accessibility */
+}
+
+/* 4. Headings - Normalize margin and padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; /* Remove default boldness on headings */
+  margin: 0; /* Remove default margin */
+}
+
+/* 5. Lists - Remove default list styling */
+ul,
+ol {
+  list-style: none; /* Remove bullet points or numbers */
   margin: 0;
+  padding: 0;
+}
+
+/* 6. Tables - Make tables more readable */
+table {
+  border-collapse: collapse; /* Collapse borders to avoid double lines */
+  width: 100%; /* Allow tables to expand full width */
+}
+
+th,
+td {
+  padding: 8px; /* Add padding for better spacing */
+  text-align: left; /* Align text to the left for readability */
+  border-bottom: 1px solid #ccc; /* Light border at the bottom */
+}
+
+/* 7. Forms - Basic styles for inputs, buttons, and textareas */
+input,
+textarea,
+select,
+button {
+  font-family: inherit; /* Use the inherited font */
+  font-size: inherit; /* Inherit font size */
+  border: 1px solid #ccc; /* Border styling */
+  outline: none; /* Remove default outline */
+  padding: 8px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%; /* Make inputs take full width */
+}
+
+/* 8. Accessibility - Ensure good focus visibility */
+:focus {
+  outline: 3px solid #007bff; /* Add a focus outline for accessibility */
+}
+
+*::selection {
+  background: #007bff; /* Custom selection color */
+  color: white; /* Change text color when selected */
+}
+
+/* 9. Images */
+img {
+  max-width: 100%; /* Ensure images scale down to fit their container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any space below images */
+}
+
+/* 10. Responsive Typography - Set default rem base */
+html {
+  font-size: 16px; /* Base font size for rem units */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Smaller font size on smaller screens */
+  }
 }

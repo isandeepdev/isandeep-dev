@@ -1,0 +1,13 @@
+.header {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 120px;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+}

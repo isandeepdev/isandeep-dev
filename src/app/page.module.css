@@ -1,0 +1,25 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000;
+}
+.heading {
+  font-size: 5rem;
+  font-family: var(--font-bold);
+  color: #ffffff;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  line-height: 1rem;
+  margin-top: 5rem;
+}
+.heading span {
+  background-color: #9de50f;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+}

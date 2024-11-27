@@ -10,7 +10,9 @@ const Header = () => {
       </Link>
 
       <nav className={styles.menu} aria-label="Main navigation">
-        <Button label="Get in touch" />
+        <Button label="Get in touch">
+          <img className={styles.phone} src="/phone.svg" />
+        </Button>
       </nav>
     </header>
   );

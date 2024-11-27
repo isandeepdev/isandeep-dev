@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 
 const Header = () => {
   return (
@@ -9,11 +9,11 @@ const Header = () => {
         <img src="/logo.svg" />
       </Link>
 
-      <nav className={styles.menu} aria-label="Main navigation">
+      {/* <nav className={styles.menu} aria-label="Main navigation">
         <Button label="Get in touch">
           <img className={styles.phone} src="/phone.svg" />
         </Button>
-      </nav>
+      </nav> */}
     </header>
   );
 };
